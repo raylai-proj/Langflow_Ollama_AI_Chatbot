@@ -1,5 +1,5 @@
 [project]
-name = "langflow-ollama-ai-chatbot"
+name = "langflow_ollama_ai_chatbot"
 version = "0.1.0"
 description = ""
 authors = [
@@ -14,7 +14,7 @@ dependencies = [
 packages = [{include = "langflow_ollama_ai_chatbot", from = "src"}]
 
 [tool.poetry.scripts]
-langflow-ollama-ai-chatbot = "langflow-ollama-ai-chatbot.main:main"
+langflow_ollama_ai_chatbot = "langflow_ollama_ai_chatbot.main:main"
 
 [tool.poetry.group.test.dependencies]
 flake8 = "^7.3.0"
