@@ -5,7 +5,7 @@ In this repo, I utilized Ollama, which is an open source tool, to allowed me run
 ### Models
 In this repo, I used following LLMs to build the AI chatbot.<br >
 - llama3.2:1b: <br >
-Llama 3.2:1b is a lightweight version of the Llama 3.2 family, designed to help users build customized agentic applications locally. By running applications locally, it ensures superior privacy since data remains on the device and is never shared with the cloud. Additionally, as a text-only model specializing in multilingual text generation, it allows for easy personalization without language barriers.<br >
+Llama 3.2:1b is a lightweight version of the Llama 3.2 family, designed to help users build customized agentic applications locally. By running applications locally, it ensures superior privacy since data remains on the device and is never shared with the cloud. Additionally, as a text-only model specializing in multilingual text generation, it allows for easy personalization without language barriers.<sub>[3]</sub><br >
 - nomic-embed-text:latest
 ## Langflow
 ### UV
@@ -13,4 +13,5 @@ Llama 3.2:1b is a lightweight version of the Llama 3.2 family, designed to help 
 ## Reference
 [1] [ollama](https://github.com/ollama/ollama)<br >
 [2] [ollama.com](https://ollama.com/)<br >
+[3] [Llama 3.2: Revolutionizing edge AI and vision with open, customizable models](https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/)
 
