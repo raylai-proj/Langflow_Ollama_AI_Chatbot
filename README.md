@@ -10,7 +10,8 @@ llama 3.2:1b is a lightweight version of the Llama 3.2 family, designed to help 
 nomic-embed-text model is a popular open-source model featuring an 8192-token context length. It outperforms OpenAI’s text-embedding-ada-002 and text-embedding-3-small in both short and long-context tasks. As a vital component for NLP applications, it enables LLMs to perform Retrieval-Augmented Generation (RAG). In our implementation, we used the model to convert uploaded files into numerical vectors, allowing the database to perform high-speed semantic searches. This ensures the system can quickly retrieve the most relevant context to answer a user's query.<sub>[4][5]</sub><br >
 ## Langflow<br >
 Langflow is a visual IDE that supports major LLMs and customized AI models, enabling the development of AI agents through a low-code or no-code approach. It provides a built-in API alongside its visual interface, allowing us to seamlessly build, deploy, and manage agent workflows. Because every component is integrated into a modular toolbox, it offers a clear structural overview of the AI agent's logic. This let us to design customized agents via a drag-and-drop interface and immediately refine or validate them using the integrated testing playground. In this repo, we use Langflow to build a medical AI agent specializing in the treatment of Plantar fasciitis. We have collected and uploaded relevant medical data so the agent can recommend treatments and provide guidance to help users improve their condition and recover more effectively.<sub>[6][7][8][9]</sub><br>
-### UV
+### UV<br >
+UV is a python package manager like `pip` and `poetry`, but it performs outstanding speed in installing Langflow and is compatible with `pip` which makes it great for beginners who can practice using UV; in the mean time, they can switch back to `pip` whenever they want.<sub>[6][10]</sub><br >
 ### Structure
 ## Reference
 [1] [ollama github](https://github.com/ollama/ollama)<br >
@@ -21,5 +22,6 @@ Langflow is a visual IDE that supports major LLMs and customized AI models, enab
 [6] [langflow github](https://github.com/langflow-ai/langflow)<br >
 [7] [Fix Plantar Fasciitis Fast - Foot Pain Gone (50+)](https://www.youtube.com/watch?v=Eq0SssY4ZXs)<br >
 [8] [How To Fix Plantar Fasciitis (NO MORE HEEL PAIN!)](https://www.youtube.com/watch?v=NE0GqcRb9f8)<br >
-[9] [YouTubeToTranscript.com](https://youtubetotranscript.com/)
+[9] [YouTubeToTranscript.com](https://youtubetotranscript.com/)<br >
+[10] [uv introduction](https://docs.astral.sh/uv/)<br >
 
