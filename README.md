@@ -12,7 +12,11 @@ __nomic-embed-text__ model is a popular open-source model featuring an 8192-toke
 __Langflow__ is a visual IDE that supports major LLMs and customized AI models, enabling the development of AI agents through a low-code or no-code approach. It provides a built-in API alongside its visual interface, allowing us to seamlessly build, deploy, and manage agent workflows. Because every component is integrated into a modular toolbox, it offers a clear structural overview of the AI agent's logic. This let us to design customized agents via a drag-and-drop interface and immediately refine or validate them using the integrated testing playground. In this repo, we use __Langflow__ to build a medical AI agent specializing in the treatment of Plantar fasciitis. We have collected and uploaded relevant medical data so the agent can recommend treatments and provide guidance to help users improve their condition and recover more effectively.<sub>[6][7][8][9]</sub><br>
 ### UV<br >
 __UV__ is a python package manager like `pip` and `poetry`, but it performs outstanding speed in installing Langflow and is compatible with `pip` which makes it great for beginners who can practice using __UV__; in the mean time, they can switch back to `pip` whenever they want.<sub>[6][10]</sub><br >
-### Structure
+### Structure<br >
+- AI model:<br >
+The AI model is the heart of any chatbot, governing how the system interprets and responds to user queries. In this repository, we utilize __Llama 3.2-1B__ to process questions, analyze context retrieved from the vector store, and generate responses with a predefined personality. To power our retrieval system, we integrated the __nomic-embed-text:latest__ model. This model converts text into high-dimensional vectors, enabling high-speed data indexing and highly accurate semantic searches.<sub>[5][11][12]</sub><br >
+- RAG:<br >
+- Input and output:<br >
 ## Reference
 [1] [ollama github](https://github.com/ollama/ollama)<br >
 [2] [ollama.com](https://ollama.com/)<br >
@@ -24,4 +28,6 @@ __UV__ is a python package manager like `pip` and `poetry`, but it performs outs
 [8] [How To Fix Plantar Fasciitis (NO MORE HEEL PAIN!)](https://www.youtube.com/watch?v=NE0GqcRb9f8)<br >
 [9] [YouTubeToTranscript.com](https://youtubetotranscript.com/)<br >
 [10] [uv introduction](https://docs.astral.sh/uv/)<br >
+[11] [How to Run AI Models Locally with Langflow and Ollama](https://www.youtube.com/watch?v=kFEMtax1yd4)<br >
+[12] [Using Ollama with Agents in Langflow](https://www.youtube.com/watch?v=bZDk5sgMLsk)<br >
 
