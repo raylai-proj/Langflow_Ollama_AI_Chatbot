@@ -14,9 +14,15 @@ __Langflow__ is a visual IDE that supports major LLMs and customized AI models, 
 __UV__ is a python package manager like `pip` and `poetry`, but it performs outstanding speed in installing Langflow and is compatible with `pip` which makes it great for beginners who can practice using __UV__; in the mean time, they can switch back to `pip` whenever they want.<sub>[6][10]</sub><br >
 ### Structure<br >
 - AI model:<br >
-The AI model is the heart of any chatbot, governing how the system interprets and responds to user queries. In this repository, we utilize __Llama 3.2-1B__ to process questions, analyze context retrieved from the vector store, and generate responses with a predefined personality. To power our retrieval system, we integrated the __nomic-embed-text:latest__ model. This model converts text into high-dimensional vectors, enabling high-speed data indexing and highly accurate semantic searches.<sub>[5][11][12]</sub><br >
-- RAG:<br >
-- Input and output:<br >
+The AI model is the heart of any chatbot, governing how the system interprets and responds to user queries. In this repository, we utilize __Llama 3.2-1B__ to process questions, analyze context retrieved from the vector store, and generate responses with a predefined personality. To power our retrieval system, we integrated the __nomic-embed-text:latest__ model. This model converts text into high-dimensional vectors, enabling high-speed data indexing and highly accurate semantic searches.<sub>[5][11][12]</sub><br ><br >
+- RAG (Retrieval-Augmented Generation):<br >
+RAG is an AI workflow where models follow developer-designed workflows to search for information in vector stores or the internet before responding to users <sub>[13]</sub>. In this repository, we built a vector store containing specialized information on Plantar Fasciitis. We designed a workflow that requires the AI to search for specific symptoms and treatments within that database before answering any user queries.<br >
+  1. Data Ingestion:<br >
+  To populate the database, we created an ingestion pipeline using __File__, __Splitter__, and __Vector Store__ components. We gathered data by converting Plantar Fasciitis YouTube videos <sub>[7][8]</sub> into text via `YouTubeToTranscript.com` <sub>[9]</sub>. To optimize this process, we used a __Splitter__ to break the text into smaller chunks. These chunks were then stored in __ChromaDB__, where the __nomic-embed-text:latest__ model converted them into vectors for efficient indexing and semantic retrieval. <sub>[5]</sub><br >
+  2. Query & Retrieval:<br >
+  For the search phase, we configured a ChromaDB instance pointing to our existing database using the same embedding model. This allows the system to take a question from the __Chat Input__, convert it into a vector, and retrieve the most relevant text segments from the store. <sub>[5]</sub><br ><br >
+- Input and Output:<br >
+We utilized __Chat Input__ and __Chat Output__ components to manage user interaction. When a user submits a question, the system searches the vector store and uses a __Parse Data__ component to format the retrieved chunks into clean text. This text is then passed into a __Prompt Template__, where we have predefined the AI’s personality as a medical assistant specializing in Plantar Fasciitis. This ensures the final output is a professional response containing accurate information and recommended treatments. <sub>[5][7][8]</sub><br >
 ## Reference
 [1] [ollama github](https://github.com/ollama/ollama)<br >
 [2] [ollama.com](https://ollama.com/)<br >
@@ -30,4 +36,5 @@ The AI model is the heart of any chatbot, governing how the system interprets an
 [10] [uv introduction](https://docs.astral.sh/uv/)<br >
 [11] [How to Run AI Models Locally with Langflow and Ollama](https://www.youtube.com/watch?v=kFEMtax1yd4)<br >
 [12] [Using Ollama with Agents in Langflow](https://www.youtube.com/watch?v=bZDk5sgMLsk)<br >
+[13] [AI Agents, Clearly Explained](https://www.youtube.com/watch?v=FwOTs4UxQS4)<br >
 
